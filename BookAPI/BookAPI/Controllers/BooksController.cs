@@ -10,9 +10,9 @@ namespace BookAPI.Controllers
     {
         private Book[] _books = new Book[]
         {
-            new Book{ Id = 1, Author = "Author One", Title = "Book One" },
-            new Book{ Id = 2, Author = "Author Two", Title = "Book Two" },
-            new Book{ Id = 3, Author = "Author Three", Title = "Book Three" }
+            new Book{ Id = 1, Author = "Author One", Title = "Book One", Description = "description here" },
+            new Book{ Id = 2, Author = "Author Two", Title = "Book Two", Description = "description here" },
+            new Book{ Id = 3, Author = "Author Three", Title = "Book Three", Description = "description here" }
         };
 
         [HttpGet]

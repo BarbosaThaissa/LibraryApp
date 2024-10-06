@@ -1,10 +1,9 @@
-<h1>Book List</h1>
-
-<ul>
-  <li *ngFor="let book of books">
-    <h3>Title: {{ book.title }}</h3>
-    <p>Author: {{ book.author }}</p>
-    <p>Description: {{ book.description }}</p>
-    <p>ID: {{ book.id }}</p>
-  </li>
-</ul>
+<section class="container">
+  <article class="card-container">
+    <div class="card" *ngFor="let book of books">
+      <h3 class="card-title">{{ book.title }}</h3>
+      <p class="card-author">Author: {{ book.author }}</p>
+      <p class="card-description">{{ book.description }}</p>
+    </div>
+  </article>
+</section>

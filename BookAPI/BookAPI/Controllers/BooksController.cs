@@ -1,5 +1,7 @@
 ﻿using BookAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using BookAPI.Services;
+using System.Collections.Generic;
 
 namespace BookAPI.Controllers
 {
@@ -8,17 +10,17 @@ namespace BookAPI.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private Book[] _books = new Book[]
+        private readonly BookService _bookService;
+        
+        public BooksController(BookService bookService)
         {
-            new Book{ Id = 1, Author = "Author One", Title = "Book One", Description = "description here" },
-            new Book{ Id = 2, Author = "Author Two", Title = "Book Two", Description = "description here" },
-            new Book{ Id = 3, Author = "Author Three", Title = "Book Three", Description = "description here" }
-        };
+            _bookService = bookService;
+        }
 
         [HttpGet]
         public ActionResult<IEnumerable<Book>> GetBooks()
         {
-            return Ok(_books);
+            return Ok(_bookService.GetBooks());
         }
     }
 }

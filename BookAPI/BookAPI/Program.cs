@@ -1,3 +1,5 @@
+using BookAPI.Services;
+
 namespace BookAPI
 {
     public class Program
@@ -15,6 +17,9 @@ namespace BookAPI
                     .AllowAnyMethod();
                 });
             });
+
+            // Registrar o serviço BookService
+            builder.Services.AddSingleton<BookService>();
 
             var app = builder.Build();
             app.UseCors("MyCors");

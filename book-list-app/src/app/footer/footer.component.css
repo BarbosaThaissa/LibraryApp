@@ -1,0 +1,16 @@
+footer {
+  background-color: #212529;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer > p > a {
+  color: pink;
+  text-decoration: none;
+}
+
+footer > p > a:hover {
+  text-decoration: underline;
+}
